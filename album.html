@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<title>My Album</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpeg" href="images/favicon1.png">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link rel="stylesheet" href="css/ttc.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.i-row-padding img {margin-bottom: 12px}
+
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.bg {
+    /* The image used */
+    /*background-image: url("images/nature/n1.JPG");
+
+    /* Full height */
+    background-color: #e5e5ff;
+    height: 100%;
+margin: 0;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.my {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+</style>
+<body class="bg" >
+<div class="i-top">
+  <div class="i-bar i-white i-wide i-padding i-card-2">
+    <a href="index.html" class="i-bar-item i-button">Home</a>
+       <div class="i-right i-hide-small">
+      <a href="about.html" class="i-bar-item i-button">About Me</a>
+      <a href="#cont" class="i-bar-item i-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="i-content " style="max-width:1500px">
+
+<!-- Header -->
+<div class="i-opacity">
+
+<div class="i-clear"></div>
+<header class="i-center i-margin-bottom" style="padding-top: 5%;">
+  <h1><b>KERALA & BANGALORE</b></h1>
+  <p class="creds">moments captured by <a target="_blank" href="https://www.github.com/leonatwork">leonatwork</a></p>
+  <p><b>Site contains many graphic elements. May take some time to load.</b></p>
+
+</header>
+</div>
+
+<h1 class="title">Random Shots</h1>
+
+   <div style="padding-bottom: 10px;margin-bottom: 5px;">
+     <div class="flip-menu" style="padding-bottom: 10px;margin-bottom: 5px;">
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i8.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="a">
+                <label for="a" class="flip-item">
+                    <figure class="front"><img src="images/intro/i8.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="fav1.jpeg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">IBM Office</h4>
+                            <p>Infront of the IBM office main entrance, Bengaluru</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i3.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="b">
+                <label for="b" class="flip-item">
+                    <figure class="front"><img src="images/intro/i3.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i3.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Always welcome</h4>
+                            <p>Small climb towards home, with lush green trees both sides.</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i5.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="c">
+                <label for="c" class="flip-item">
+                    <figure class="front"><img src="images/intro/i5.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i5.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Fun park</h4>
+                            <p>Nothing to say...Missing those days</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i9.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="d">
+                <label for="d" class="flip-item">
+                    <figure class="front"><img src="images/intro/i9.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i9.jpg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Amen</h4>
+                            <p>Gazing at the wooden roof, so beautiful.</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i1.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="e">
+                <label for="e" class="flip-item">
+                    <figure class="front"><img src="images/intro/i1.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i1.jpg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">The road less travelled</h4>
+                            <p>Are we in Bangalore!!</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i12.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="f">
+                <label for="f" class="flip-item">
+                    <figure class="front"><img src="images/intro/i12.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i12.jpg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Above the clouds</h4>
+                            <p>For a sec all white, one strong wind, what a sight!</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i10.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="g">
+                <label for="g" class="flip-item">
+                    <figure class="front"><img src="images/intro/i10.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i10.jpg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">D.V.K</h4>
+                            <p>Dharmaram Vidhya Kshetram, itna sannata kyu hain bhai!</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i6.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="h">
+                <label for="h" class="flip-item">
+                    <figure class="front"><img src="images/intro/i6.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i6.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Rollin' & Jumpin'</h4>
+                            <p>No entry, I'm too big for it...am I.</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/r13x.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="j">
+                <label for="j" class="flip-item">
+                    <figure class="front"><img src="images/intro/r13x.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/r13x.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">A rare one</h4>
+                            <p>A classic photo</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i7.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="k">
+                <label for="k" class="flip-item">
+                    <figure class="front"><img src="images/intro/i7.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i7.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">I see you</h4>
+                            <p>Hiding under the leaves could be some poisonous weeds...walk cautiously.</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/i11.JPG" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="l">
+                <label for="l" class="flip-item">
+                    <figure class="front"><img src="images/intro/i11.JPG" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/i11.JPG" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Guest house</h4>
+                            <p>Finally got wifi after 4 days of isolation...lol</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+            <section class="flip-item-wrap">
+                <img class="fake-image" src="images/intro/r3.jpg" alt=""><!-- this image will add height to parent element -->
+                <input type="checkbox" class="flipper" id="m">
+                <label for="m" class="flip-item">
+                    <figure class="front"><img src="images/intro/r3.jpg" alt=""></img></figure>
+                    <figure class="back">
+                        <img src="images/intro/r3.jpg" alt=""></img>
+                        <div class="flip-item-desc">
+                            <h4 class="flip-item-title">Do you see a tree</h4>
+                            <p>Enroute to Bangalore, the garden city.</p>
+                        </div>
+                    </figure>
+                </label>
+            </section>
+        </div></div>
+
+        <div><h1 class="title" style="text-align: center; margin-top: 17%; padding-top: 17%; margin-bottom:25px; padding-bottom:25px;">And the adventure begins!<br></h1></div>
+<!-- Photo Grid -->
+<div class="i-row-padding" id="myGrid" style="margin-bottom:28px">
+  <div class="i-third">
+    <img class="gimg" src="images/random/r1x.jpg" style="width:100%">
+    <img class="gimg" src="images/churches/ch1x.jpg" style="width:100%" alt="churches">
+<img class="gimg" src="images/random/r7x.jpg" style="width:100%">
+        <img class="gimg" src="images/churches/ch10.jpg" style="width:100%">
+
+  </div>
+
+  <div class="i-third">
+    <img class="gimg" src="images/random/r9x.jpg" style="width:100%;padding-top: 5px;padding-bottom: 5px;">
+    <img class="gimg" src="images/random/r8x.jpg" style="width:100%;padding-bottom: 4px;">
+
+    <img class="gimg" src="images/random/r10x.JPG" style="width:100%;padding-bottom: 5px;">
+    <img class="gimg" src="images/random/r12x.JPG" style="width:100%">
+  </div>
+
+  <div class="i-third">
+     <img class="gimg" src="images/random/r6x.jpg" style="width:100%">
+<img class="gimg" src="images/churches/ch11.jpg" style="width:100%">
+    <img class="gimg" src="images/random/r11x.JPG" style="width:100%">
+  </div>
+</div>
+
+<div><h1 class="title" style="text-align: center; margin-top: 25px; padding-top: 0%; margin-bottom:25px; padding-bottom:25px;">Nature at its finest<br></h1></div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="images/nature/n1x.JPG" height="550" style="width:100%">
+  <div class="text">Kuttikkanam, Kerala</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="images/nature/n2x.JPG" height="550" style="width:100%">
+  <div class="text">The rising fog</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="images/nature/n3x.jpg" height="550" style="width:100%">
+  <div class="text">Peerumedu, Kerala</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="images/nature/n4x.jpg" height="550" style=" width:100%">
+  <div class="text">Near the clouds</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="images/nature/n5x.JPG" height="550" style="width:100%;">
+  <div class="text">It's massive than it looks</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="images/nature/n6x.JPG" height="550" style="width:100%">
+  <div class="text">Back waters</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<div><h1 class="title" style="text-align: center; margin-top: 0%; padding-top: 0%; margin-bottom:25px; padding-bottom:25px;">HOME<br></h1></div>
+<!-- Photo Grid -->
+<div class="i-row-padding " style="margin-bottom:28px">
+  <div class="i-half">
+ <img src="images/home/h1xx.JPG" style="width:100%" onclick="onClick(this)" alt="The front gate - Anikkadu,Kerala" class="hover-shadow cursor">
+    <img src="images/home/h9.JPG" style="width:100%" onclick="onClick(this)" alt="Jack fruits are a speciality...Don't know how the trees are holding up these heavy fruits so high." class="hover-shadow cursor">
+    <img src="images/home/h7.JPG" style="width:100%" onclick="onClick(this)" alt="The white one's my favourite...eating so peacefully" class="hover-shadow cursor">
+    <img src="images/home/h5.JPG" style="width:100%" onclick="onClick(this)" alt="Where it goes at night is still a mystery, whenever you see her, she'll give a nonchalant shrug" class="hover-shadow cursor">
+    <img src="images/home/h10.JPG" style="width:100%" onclick="onClick(this)" alt="The road infront of our house...far far away from the crowded city." class="hover-shadow cursor">
+    <img src="images/home/h12.JPG" style="width:100%" onclick="onClick(this)" alt="Rubber plantations and its manufacturing is a sight to behold" class="hover-shadow cursor">
+
+  </div>
+
+  <div class="i-half">
+  <img src="images/home/h3.JPG" style="width:100%;padding-bottom:2px;" onclick="onClick(this)" alt="Home sweet home" class="hover-shadow cursor">
+    <img src="images/home/h2.JPG" style="width:100%;padding-bottom:2px;" onclick="onClick(this)" alt="Doors are always open" class="hover-shadow cursor">
+    <img src="images/home/h8.jpg" style="width:100%;padding-bottom:2px;" onclick="onClick(this)" alt="Barn with goats. You go there the and they will stare you the face." class="hover-shadow cursor">
+    <img src="images/home/h6.JPG" style="width:100%;padding-bottom:2px;" onclick="onClick(this)" alt="The eldest goat...so innocent" class="hover-shadow cursor">
+    <img src="images/home/h4.JPG" style="width:100%;padding-bottom:2px;" onclick="onClick(this)" alt="Need a break...go stroll in the woods." class="hover-shadow cursor">
+    <img src="images/home/h11.JPG" style="width:100%" onclick="onClick(this)" alt="Close your eyes and you'll hear the music of nature." class="hover-shadow cursor">
+  </div>
+</div>
+
+<div><h1 class="title" style="text-align: center; margin-top: 0%; padding-top: 0%; margin-bottom:25px; padding-bottom:-5px;">Bangalore </h1></div>
+<div><h1 style="text-align: center;padding-bottom:20px;font-size: 10px;color: grey;">only few clicks</h1></div>
+
+<div class="row">
+  <div class="column">
+    <img src="images/bangalore/b5x.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/bangalore/b4x.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/bangalore/b2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/bangalore/b3x.JPG" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/bangalore/b1x.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="my">
+      <div class="numbertext">1 / 5</div>
+      <img src="images/bangalore/b5x.jpg" style="width:100%">
+    </div>
+
+    <div class="my">
+      <div class="numbertext">2 / 5</div>
+      <img src="images/bangalore/b4x.jpg" style="width:100%">
+    </div>
+
+    <div class="my">
+      <div class="numbertext">3 / 5</div>
+      <img src="images/bangalore/b2.jpg" style="width:100%">
+    </div>
+
+    <div class="my">
+      <div class="numbertext">4 / 5</div>
+      <img src="images/bangalore/b3x.JPG" style="width:100%">
+    </div>
+
+    <div class="my">
+      <div class="numbertext">5 / 5</div>
+      <img src="images/bangalore/b1x.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="cap"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="images/bangalore/b5x.jpg" style="width:100%" onclick="currentSlide(1)" alt="Forum mall">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bangalore/b4x.jpg" style="width:100%" onclick="currentSlide(2)" alt="DVK and Christ University">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bangalore/b2.jpg" style="width:100%" onclick="currentSlide(3)" alt="The garden city">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bangalore/b3x.JPG" style="width:100%" onclick="currentSlide(4)" alt="Fun day at the park">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bangalore/b1x.jpg" style="width:100%" onclick="currentSlide(5)" alt="IBM Head office">
+    </div>
+  </div>
+</div>
+
+  <div><h1 class="title" style="text-align: center; margin-top: 28px; padding-top: 28px%; margin-bottom:25px; padding-bottom:25px;">Majestic Churches<br></h1></div>
+   <!-- Photo grid -->
+  <div class="i-row-padding">
+    <div class="i-third">
+      <img src="images/churches/ch12x.JPG" style="width:100%" onclick="onClick(this)" alt="St. Andrew's Basilica, Arthunkal" class="hover-shadow cursor">
+      <img src="images/churches/ch2x.JPG" style="width:100%" onclick="onClick(this)" alt="St. Thomas Church, Kokkamangalam" class="hover-shadow cursor">
+      <img src="images/churches/ch3x.JPG" style="width:100%" onclick="onClick(this)" alt="Inside St. Thomas church" class="hover-shadow cursor">
+    </div>
+
+    <div class="i-third">
+    <img src="images/churches/ch4x.JPG" style="width:100%" onclick="onClick(this)" alt="Holy Cross Forane Church of Cherpunkal" class="hover-shadow cursor">
+      <img src="images/churches/ch5x.JPG" style="width:100%" onclick="onClick(this)" alt="St. Mary's church" class="hover-shadow cursor">
+      <img src="images/churches/ch6x.JPG" style="width:100%" onclick="onClick(this)" alt="Amazing artistry and altar" class="hover-shadow cursor">
+    </div>
+
+    <div class="i-third">
+      <img src="images/churches/ch7x.JPG" style="width:100%" onclick="onClick(this)" alt="St.Mary's Forane Church" class="hover-shadow cursor">
+      <img src="images/churches/ch8x.JPG" style="width:100%" onclick="onClick(this)" alt="Statue of infant Jesus" class="hover-shadow cursor">
+      <img src="images/churches/ch9xx.JPG" style="width:100%" onclick="onClick(this)" alt="Up above!" class="hover-shadow cursor">
+    </div>
+  </div>
+<!-- Modal for full size images on click-->
+
+</div>
+ <div id="modal01" class="i-modal i-black" style="padding-top:0" onclick="this.style.display='none'">
+    <div class="i-modal-content i-animate-zoom i-center i-transparent i-padding-64">
+      <img id="img01" class="i-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- Footer -->
+<div id="cont" class="contact">
+    <footer class="i-container i-padding-64 i-center i-opacity i-light-grey i-xlarge">
+  <a href="https://www.facebook.com/noel.das.507" target="_blank"><i class="fa fa-facebook-official i-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/noelabydas/" target="_blank"><i class="fa fa-instagram i-hover-opacity"></i></a>
+  <a href="https://www.slack.com/" target="_blank"><i class="fa fa-slack i-hover-opacity"></i></a>
+  <a href="mailto:noelabydas@gmail.com" target="_blank"><i class="fa fa-google i-hover-opacity"></i></a>
+  <a href="https://www.twitter.com/SportyNoel" target="_blank"><i class="fa fa-twitter i-hover-opacity"></i></a>
+  <a href="https://www.github.com/leonatwork" target="_blank"><i class="fa fa-github i-hover-opacity"></i></a>
+  <p class="i-medium">Made by leonatwork</p>
+</footer>
+</div>
+<script type="text/javascript">function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var Index = 1;
+show(Index);
+
+function plusSlides(n) {
+  show(Index += n);
+}
+
+function currentSlide(n) {
+  show(Index = n);
+}
+function show(n) {
+  var i;
+  var sl= document.getElementsByClassName("my");
+  var d = document.getElementsByClassName("demo");
+  var capText = document.getElementById("cap");
+  if (n > sl.length) {Index = 1}
+  if (n < 1) {Index = sl.length}
+  for (i = 0; i < sl.length; i++) {
+      sl[i].style.display = "none";
+  }
+  for (i = 0; i < d.length; i++) {
+      d[i].className = d[i].className.replace(" active", "");
+  }
+  sl[Index-1].style.display = "block";
+  d[Index-1].className += " active";
+  capText.innerHTML = d[Index-1].alt;
+}
+</script>
+</body>
+</html>
